@@ -30,7 +30,7 @@
     <form> <!--added for attribute to label in form-->
         <div class="control">
           <label for="name" >Full name <span class="required">*</span></label>
-          <input id="name" name="name" type="text" />
+          <input id="name" name="name" type="text" aria-required="true" /> <!--Added aria-required to let screen reader know that it is required field-->
         </div>
         <div class="control">
           <label for="biography">Biography</label><textarea id="biography" name="biography" type="text"></textarea>
