@@ -33,8 +33,9 @@
           <input id="name" name="name" type="text" aria-required="true" /> <!--Added aria-required to let screen reader know that it is required field-->
         </div>
         <div class="control">
-          <label for="biography">Biography</label><textarea id="biography" name="biography" type="text"></textarea>
-          <span>Include examples on your skills in JavaScript.</span>
+          <label for="biography">Biography</label>
+          <textarea id="biography" name="biography" type="text" aria-describedby="bio"></textarea> <!--added describedby-->
+          <span id="bio">Include examples on your skills in JavaScript.</span>
         </div>
         
           
