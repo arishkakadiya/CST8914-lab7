@@ -99,8 +99,9 @@
               $elementToDescribe = $input;
               $referencedElement = $input;
             }
-      // R.G. hint: fix next line ;)
-            $error = $('<a>' + message + '</a>');
+      // R.G. hint: fix next line ;) chage the code to link error to correct element
+            $error = $('<a href="#' + input + '">' + message + '</a>');
+
             $error.click(function (e) {
               // If we rely on the link's href pointing to the input's ID, it doesn't trigger forms mode in screen readers
               $referencedElement.focus();
