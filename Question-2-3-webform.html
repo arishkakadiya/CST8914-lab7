@@ -81,14 +81,15 @@
         validateInput = function validateInput(input, message) {
           var $elementToDescribe, $error, $errorContainer, $fieldset, $input, $referencedElement, value;
           $input = $('[name="' + input + '"]');
-
+          value = $input.val().trim();
       
-          if (!value){
-          if ((value = $.urlParam(input)) === null) {
+          
+          //if ((value = $.urlParam(input)) === null)
+          if(!value){
             if ($('fieldset.errors').length === 0) {
               $('form').prepend('<fieldset class="errors"><legend>Errors</legend><ul></ul></fieldset>');
             }
-          }
+          
       
             $referencedElement = null;
             $elementToDescribe = null;
@@ -117,8 +118,9 @@
               // See https://stackoverflow.com/questions/46134247/jquery-setting-focus-doesnt-work-in-ie11/
             
             }
+            return false;
           } else {
-            if ($input.is(':checkbox')) {
+            /* if ($input.is(':checkbox')) {
               $input.attr('checked', true);
             }
       
@@ -126,7 +128,8 @@
               return $input.filter('[value="' + value + '"]').attr('checked', true);
             } else {
               return $input.val(value);
-            }
+            }  */
+           return true;
           }
         };
       
