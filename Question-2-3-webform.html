@@ -34,12 +34,12 @@
         </div>
         <div class="control">
           <label for="biography">Biography</label>
-          <textarea id="biography" name="biography" type="text" aria-describedby="bio"></textarea> <!--added labelledby-->
+          <textarea id="biography" name="biography" type="text" aria-describedby="bio" aria-required="true"></textarea> <!--added labelledby and aria-required-->
           <span id="bio">Include examples on your skills in JavaScript.</span>
         </div>
         
           
-          <fieldset class="control"> <!--Added fieldset, legend to group-->
+          <fieldset class="control" aria-required="true"> <!--Added fieldset, legend to group-->
             <legend>Gender</legend>
           <div>
             <input id="gender_male" name="gender" type="radio" value="male" />
