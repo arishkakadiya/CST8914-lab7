@@ -81,11 +81,14 @@
         validateInput = function validateInput(input, message) {
           var $elementToDescribe, $error, $errorContainer, $fieldset, $input, $referencedElement, value;
           $input = $('[name="' + input + '"]');
+
       
+          if (!value){
           if ((value = $.urlParam(input)) === null) {
             if ($('fieldset.errors').length === 0) {
               $('form').prepend('<fieldset class="errors"><legend>Errors</legend><ul></ul></fieldset>');
             }
+          }
       
             $referencedElement = null;
             $elementToDescribe = null;
